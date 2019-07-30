@@ -1,0 +1,8 @@
+E:\_\_Programming\_Projects\GhostMailingSystem\GhostMailingSystem\Core\bin\Debug\Core.dll
+E:\_\_Programming\_Projects\GhostMailingSystem\GhostMailingSystem\Core\bin\Debug\Core.pdb
+E:\_\_Programming\_Projects\GhostMailingSystem\GhostMailingSystem\Core\obj\Debug\Core.dll
+E:\_\_Programming\_Projects\GhostMailingSystem\GhostMailingSystem\Core\obj\Debug\Core.pdb
+C:\Users\Greg\Documents\GhostMailingSystem\Core\bin\Debug\Core.dll
+C:\Users\Greg\Documents\GhostMailingSystem\Core\bin\Debug\Core.pdb
+C:\Users\Greg\Documents\GhostMailingSystem\Core\obj\Debug\Core.dll
+C:\Users\Greg\Documents\GhostMailingSystem\Core\obj\Debug\Core.pdb
