@@ -1,2 +1,2 @@
 # C-Sharp-Mail
-Send and receive email within a C# windows form using gmail as your mail gateway
+Send email from C# windows form using gmail as your mail gateway
