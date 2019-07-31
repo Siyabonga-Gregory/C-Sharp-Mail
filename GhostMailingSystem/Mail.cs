@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*     
+ * copyright @2018 By   : Siyabonga Gregory
+ * Developer's Website  : www.sgngcobo.weebly.com
+ * Developer's Number   : 084-492-1275
+ * Developer's E-mail   : huge.fuze@gmail.com
+ * */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

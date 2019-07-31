@@ -18,3 +18,13 @@ C:\Users\Greg\Documents\GhostMailingSystem\GhostMailingSystem\obj\x86\Debug\Ghos
 C:\Users\Greg\Documents\GhostMailingSystem\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.GhostCoder.resources
 C:\Users\Greg\Documents\GhostMailingSystem\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.Properties.Resources.resources
 C:\Users\Greg\Documents\GhostMailingSystem\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.csproj.GenerateResource.Cache
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.exe
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.pdb
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\bin\Debug\GhostMailingSystem.exe
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\bin\Debug\GhostMailingSystem.pdb
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\bin\Debug\Core.dll
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\bin\Debug\Core.pdb
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.GhostCoder.resources
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.Properties.Resources.resources
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.csproj.GenerateResource.Cache
+C:\Users\Siphosethu\Documents\GitHub\C-Sharp-Mail\GhostMailingSystem\obj\x86\Debug\GhostMailingSystem.csprojResolveAssemblyReference.cache

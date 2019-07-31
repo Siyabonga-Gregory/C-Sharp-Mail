@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.EmailBox = new System.Windows.Forms.GroupBox();
+            this.gbxUserDetails = new System.Windows.Forms.GroupBox();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.txtFrom = new System.Windows.Forms.TextBox();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.lblSubject = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.txtMessage = new System.Windows.Forms.RichTextBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.lblHeading = new System.Windows.Forms.Label();
             this.LoginBox = new System.Windows.Forms.GroupBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,26 +47,15 @@
             this.txtFromAddress = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblFrom = new System.Windows.Forms.Label();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSubject = new System.Windows.Forms.TextBox();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMessage = new System.Windows.Forms.RichTextBox();
-            this.btnSendMessage = new System.Windows.Forms.Button();
-            this.lblHeading = new System.Windows.Forms.Label();
             this.EmailBox.SuspendLayout();
+            this.gbxUserDetails.SuspendLayout();
             this.LoginBox.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // EmailBox
             // 
-            this.EmailBox.Controls.Add(this.groupBox2);
-            this.EmailBox.Controls.Add(this.label5);
+            this.EmailBox.Controls.Add(this.gbxUserDetails);
+            this.EmailBox.Controls.Add(this.lblMessage);
             this.EmailBox.Controls.Add(this.txtMessage);
             this.EmailBox.Controls.Add(this.btnSendMessage);
             this.EmailBox.Controls.Add(this.lblHeading);
@@ -65,6 +65,127 @@
             this.EmailBox.TabIndex = 6;
             this.EmailBox.TabStop = false;
             this.EmailBox.Visible = false;
+            // 
+            // gbxUserDetails
+            // 
+            this.gbxUserDetails.Controls.Add(this.lblFrom);
+            this.gbxUserDetails.Controls.Add(this.txtFrom);
+            this.gbxUserDetails.Controls.Add(this.lblTo);
+            this.gbxUserDetails.Controls.Add(this.txtSubject);
+            this.gbxUserDetails.Controls.Add(this.txtTo);
+            this.gbxUserDetails.Controls.Add(this.lblSubject);
+            this.gbxUserDetails.Location = new System.Drawing.Point(6, 43);
+            this.gbxUserDetails.Name = "gbxUserDetails";
+            this.gbxUserDetails.Size = new System.Drawing.Size(375, 135);
+            this.gbxUserDetails.TabIndex = 12;
+            this.gbxUserDetails.TabStop = false;
+            // 
+            // lblFrom
+            // 
+            this.lblFrom.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrom.ForeColor = System.Drawing.Color.White;
+            this.lblFrom.Location = new System.Drawing.Point(6, 17);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(69, 30);
+            this.lblFrom.TabIndex = 1;
+            this.lblFrom.Text = "From";
+            // 
+            // txtFrom
+            // 
+            this.txtFrom.BackColor = System.Drawing.Color.White;
+            this.txtFrom.Enabled = false;
+            this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFrom.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtFrom.Location = new System.Drawing.Point(90, 16);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(278, 26);
+            this.txtFrom.TabIndex = 2;
+            // 
+            // lblTo
+            // 
+            this.lblTo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTo.ForeColor = System.Drawing.Color.White;
+            this.lblTo.Location = new System.Drawing.Point(6, 52);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(69, 30);
+            this.lblTo.TabIndex = 6;
+            this.lblTo.Text = "To";
+            // 
+            // txtSubject
+            // 
+            this.txtSubject.BackColor = System.Drawing.Color.White;
+            this.txtSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubject.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtSubject.Location = new System.Drawing.Point(91, 86);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(278, 29);
+            this.txtSubject.TabIndex = 9;
+            this.txtSubject.TextChanged += new System.EventHandler(this.txtSubject_TextChanged);
+            // 
+            // txtTo
+            // 
+            this.txtTo.BackColor = System.Drawing.Color.White;
+            this.txtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTo.Location = new System.Drawing.Point(90, 51);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(278, 29);
+            this.txtTo.TabIndex = 7;
+            this.txtTo.TextChanged += new System.EventHandler(this.txtTo_TextChanged);
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject.ForeColor = System.Drawing.Color.White;
+            this.lblSubject.Location = new System.Drawing.Point(6, 87);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(78, 30);
+            this.lblSubject.TabIndex = 8;
+            this.lblSubject.Text = "Subject";
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.White;
+            this.lblMessage.Location = new System.Drawing.Point(2, 189);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(88, 22);
+            this.lblMessage.TabIndex = 11;
+            this.lblMessage.Text = "Message";
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMessage.Location = new System.Drawing.Point(6, 214);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(375, 98);
+            this.txtMessage.TabIndex = 10;
+            this.txtMessage.Text = "";
+            this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendMessage.ForeColor = System.Drawing.Color.Cyan;
+            this.btnSendMessage.Location = new System.Drawing.Point(121, 326);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(145, 33);
+            this.btnSendMessage.TabIndex = 5;
+            this.btnSendMessage.Text = "Send";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.ForeColor = System.Drawing.Color.White;
+            this.lblHeading.Location = new System.Drawing.Point(8, 16);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(365, 30);
+            this.lblHeading.TabIndex = 4;
+            this.lblHeading.Text = "Header";
+            this.lblHeading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // LoginBox
             // 
@@ -147,127 +268,6 @@
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email Address ";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lblFrom);
-            this.groupBox2.Controls.Add(this.txtFrom);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtSubject);
-            this.groupBox2.Controls.Add(this.txtTo);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(6, 43);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(375, 135);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            // 
-            // lblFrom
-            // 
-            this.lblFrom.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrom.ForeColor = System.Drawing.Color.White;
-            this.lblFrom.Location = new System.Drawing.Point(6, 17);
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(69, 30);
-            this.lblFrom.TabIndex = 1;
-            this.lblFrom.Text = "From";
-            // 
-            // txtFrom
-            // 
-            this.txtFrom.BackColor = System.Drawing.Color.White;
-            this.txtFrom.Enabled = false;
-            this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFrom.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtFrom.Location = new System.Drawing.Point(90, 16);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(278, 26);
-            this.txtFrom.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 30);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "To";
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.BackColor = System.Drawing.Color.White;
-            this.txtSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubject.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtSubject.Location = new System.Drawing.Point(91, 86);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(278, 29);
-            this.txtSubject.TabIndex = 9;
-            this.txtSubject.TextChanged += new System.EventHandler(this.txtSubject_TextChanged);
-            // 
-            // txtTo
-            // 
-            this.txtTo.BackColor = System.Drawing.Color.White;
-            this.txtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTo.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtTo.Location = new System.Drawing.Point(90, 51);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(278, 29);
-            this.txtTo.TabIndex = 7;
-            this.txtTo.TextChanged += new System.EventHandler(this.txtTo_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 30);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Subject";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(2, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 22);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Message";
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMessage.Location = new System.Drawing.Point(6, 214);
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(375, 98);
-            this.txtMessage.TabIndex = 10;
-            this.txtMessage.Text = "";
-            this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
-            // 
-            // btnSendMessage
-            // 
-            this.btnSendMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendMessage.ForeColor = System.Drawing.Color.Cyan;
-            this.btnSendMessage.Location = new System.Drawing.Point(121, 326);
-            this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(145, 33);
-            this.btnSendMessage.TabIndex = 5;
-            this.btnSendMessage.Text = "Send";
-            this.btnSendMessage.UseVisualStyleBackColor = true;
-            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
-            // 
-            // lblHeading
-            // 
-            this.lblHeading.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.ForeColor = System.Drawing.Color.White;
-            this.lblHeading.Location = new System.Drawing.Point(8, 16);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(365, 30);
-            this.lblHeading.TabIndex = 4;
-            this.lblHeading.Text = "Using RSA Encryption";
-            this.lblHeading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // GhostCoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,13 +283,13 @@
             this.Name = "GhostCoder";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "                                       Ghost Coder Mailing System";
+            this.Text = "                                                      Ghost Coder ";
             this.Load += new System.EventHandler(this.GhostCoder_Load);
             this.EmailBox.ResumeLayout(false);
+            this.gbxUserDetails.ResumeLayout(false);
+            this.gbxUserDetails.PerformLayout();
             this.LoginBox.ResumeLayout(false);
             this.LoginBox.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -297,14 +297,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox EmailBox;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbxUserDetails;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.TextBox txtFrom;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.TextBox txtTo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSubject;
+        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.RichTextBox txtMessage;
         private System.Windows.Forms.Button btnSendMessage;
         private System.Windows.Forms.Label lblHeading;
